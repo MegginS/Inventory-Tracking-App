@@ -15,7 +15,6 @@ class Item():
       self.destination= destination
       self.date_aquired= date_aquired
       self.delivery_date= delivery_date
-  
 
 class Warehouse():
   """A Warehouse"""
@@ -39,10 +38,9 @@ def verify_attributes(attr1, attr2, attr3, mydict):
 def attribute_values(attr_list):
 
     for attr in attr_list:
-        if len(attr) > 2:
-            return True
-        else:
+        if len(attr) <= 2:
             return False
+    return True
         
 
 items = []
@@ -134,14 +132,12 @@ def edit():
     inventory_id= edit_request["inventory_id"]
 
     if len(items) == 0:
-        print("1")
         response = {"Status": "Failed", "Error": "Inventory_ID non existant"}
         return jsonify(response)
 
     for item in items:
 
         if item.inventory_id == int(inventory_id):
-            print("2")
             item.client_name= edit_request["client_name"]
             item.item_name= edit_request["item_name"]
             item.warehouse_id= edit_request["warehouse_id"]
@@ -152,10 +148,8 @@ def edit():
             response = {"Status": "Success!", "Edited item": inventory_id, "client_name": item.client_name, "item_name": item.item_name, "warehouse_id": item.warehouse_id, "destination": item.destination, "date_aquired": item.date_aquired, "delivery_date": item.delivery_date}
             return jsonify(response)
 
-        elif item.inventory_id != int(inventory_id) and items.index(item) + 1 == len(items):
-            print("3")
-            response = {"Status": "Failed", "Inventory_Id": inventory_id, "Error": "Inventory_ID non existant"}
-            return jsonify(response)
+    response = {"Status": "Failed", "Inventory_Id": inventory_id, "Error": "Inventory_ID non existant"}
+    return jsonify(response)
 
 
 

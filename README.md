@@ -12,19 +12,24 @@ This app is an inventory tracking web application. You are able to:
 #### How to Use:
 
 1. Go to Replit Link: https://replit.com/@Meggin/Shopify-Project#main.py
-2. Click "Run" on replit
-3. Send Requests by either of the following:
-   - Import postman collection in this repository to send requests from Postman 
+2. Click on the blue "Fork repl" button
+4. Click "Run" on replit
+5. Send Requests by either of the following:
+   - Postman:
+     - Import postman collection from this Github repository
+     - Expand the Shopify Take Home section if necessary
+     - In the middle of the page, there is a tab labeled "Variables", click this tab 
+     - Set the "CURRENT VALUE" to the domain of your replit
    - Send a curl request, example to create and item is provided. Refer to the Sample Requests for addional requests that can me made using curl.
 
 ```
-curl -d '{"client_name":"Meggin", "item_name": "Sugars", "warehouse_id": "None", "destination": "FL", "date_aquired": "05/22", "delivery_date": "05/23"}' -H 'Content-Type: application/json' https://Shopify-Project.meggin.repl.co/create
+curl -d '{"client_name":"Meggin", "item_name": "Sugars", "warehouse_id": "None", "destination": "FL", "date_aquired": "05/22", "delivery_date": "05/23"}' -H 'Content-Type: application/json' https://INSERT_YOUR_REPLIT_DOMAIN_HERE
 ```
 
 #### Sample Requests:
 
 To create an item:
-  POST: https://Shopify-Project.meggin.repl.co/create
+  POST: https://INSERT_YOUR_REPLIT_DOMAIN_HERE/create
   
       {
          "client_name":"Meggin",
@@ -38,7 +43,7 @@ To create an item:
       
       
 To edit an item, including assignment of warehouse:
-  POST: https://Shopify-Project.meggin.repl.co/edit
+  POST: https://INSERT_YOUR_REPLIT_DOMAIN_HERE/edit
 
       {
           "inventory_id": "4",
@@ -52,7 +57,7 @@ To edit an item, including assignment of warehouse:
     
     
 To create a warehouse:
-  POST: https://Shopify-Project.meggin.repl.co/warehouses
+  POST: https://INSERT_YOUR_REPLIT_DOMAIN_HERE/warehouses
   
       {
           "warehouse_name": "NC Triangle",
@@ -64,7 +69,7 @@ To create a warehouse:
       
       
 To delete an item:
-  POST: https://Shopify-Project.meggin.repl.co/delete
+  POST: https://INSERT_YOUR_REPLIT_DOMAIN_HERE/delete
 
       {
           "inventory_id": "1"
@@ -72,7 +77,7 @@ To delete an item:
 
 
 To view the list of items:
-  GET: https://Shopify-Project.meggin.repl.co/view
+  GET: https://INSERT_YOUR_REPLIT_DOMAIN_HERE/view
 
 
 

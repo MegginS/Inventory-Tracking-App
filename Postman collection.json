@@ -20,13 +20,10 @@
 					}
 				},
 				"url": {
-					"raw": "https://Shopify-Project.meggin.repl.co/create",
+					"raw": "https://{{DOMAIN}}/create",
 					"protocol": "https",
 					"host": [
-						"Shopify-Project",
-						"meggin",
-						"repl",
-						"co"
+						"{{DOMAIN}}"
 					],
 					"path": [
 						"create"
@@ -42,7 +39,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"inventory_id\": \"4\",\r\n   \"client_name\":\"Meggin\",\r\n   \"item_name\": \"Hairbrush\",\r\n   \"warehouse_id\": \"2\",\r\n   \"destination\": \"FL\",\r\n   \"date_aquired\": \"05/22\",\r\n   \"delivery_date\": \"05/23\"\r\n}",
+					"raw": "{\r\n    \"inventory_id\": \"2\",\r\n   \"client_name\":\"Meggin\",\r\n   \"item_name\": \"Hairbrush\",\r\n   \"warehouse_id\": \"2\",\r\n   \"destination\": \"FL\",\r\n   \"date_aquired\": \"05/22\",\r\n   \"delivery_date\": \"05/23\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -50,13 +47,10 @@
 					}
 				},
 				"url": {
-					"raw": "https://Shopify-Project.meggin.repl.co/edit",
+					"raw": "https://{{DOMAIN}}/edit",
 					"protocol": "https",
 					"host": [
-						"Shopify-Project",
-						"meggin",
-						"repl",
-						"co"
+						"{{DOMAIN}}"
 					],
 					"path": [
 						"edit"
@@ -80,13 +74,10 @@
 					}
 				},
 				"url": {
-					"raw": "https://Shopify-Project.meggin.repl.co/warehouses",
+					"raw": "https://{{DOMAIN}}/warehouses",
 					"protocol": "https",
 					"host": [
-						"Shopify-Project",
-						"meggin",
-						"repl",
-						"co"
+						"{{DOMAIN}}"
 					],
 					"path": [
 						"warehouses"
@@ -110,13 +101,10 @@
 					}
 				},
 				"url": {
-					"raw": "https://Shopify-Project.meggin.repl.co/delete",
+					"raw": "https://{{DOMAIN}}/delete",
 					"protocol": "https",
 					"host": [
-						"Shopify-Project",
-						"meggin",
-						"repl",
-						"co"
+						"{{DOMAIN}}"
 					],
 					"path": [
 						"delete"
@@ -131,13 +119,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://Shopify-Project.meggin.repl.co/view",
+					"raw": "https://{{DOMAIN}}/view",
 					"protocol": "https",
 					"host": [
-						"Shopify-Project",
-						"meggin",
-						"repl",
-						"co"
+						"{{DOMAIN}}"
 					],
 					"path": [
 						"view"
@@ -145,6 +130,33 @@
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "DOMAIN",
+			"value": "Shopify-Project.meggin.repl.co",
+			"type": "string"
 		}
 	]
 }

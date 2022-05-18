@@ -192,7 +192,7 @@ def view():
 
 @app.route('/')
 def home():
-    return ('Welcome to my Logistics App, here is a link to the Github README')
+    return ('Welcome to my Logistics App, here is a link to the Github https://github.com/MegginS/Inventory-Tracking-App.git')
 
 
 if __name__ == "__main__":
